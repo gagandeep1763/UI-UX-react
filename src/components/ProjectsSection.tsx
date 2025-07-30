@@ -84,77 +84,147 @@ const ProjectsSection = () => {
           </div>
 
           {/* Projects Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            {projects.map((project, index) => (
-              <Card 
-                key={project.id} 
-                className="group border-0 shadow-lg bg-white/80 backdrop-blur-sm hover:bg-white/90 transition-all duration-300 hover:scale-105 overflow-hidden"
-              >
-                {/* Project Image */}
-                <div className="relative overflow-hidden">
-                  <img 
-                    src={project.image} 
-                    alt={project.title}
-                    className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <Badge 
-                    className="absolute top-3 left-3 bg-white/90 text-foreground border-0"
-                  >
-                    {project.category}
-                  </Badge>
-                </div>
-
-                <CardContent className="p-6">
-                  {/* Project Info */}
-                  <div className="mb-4">
-                    <h3 className="font-bold text-lg mb-1 text-foreground group-hover:text-primary transition-colors">
-                      {project.title}
-                    </h3>
-                    <p className="text-sm text-muted-foreground mb-2">{project.subtitle}</p>
-                    <p className="text-sm text-foreground leading-relaxed">
-                      {project.description}
-                    </p>
+          <div className="space-y-8 mb-12">
+            {/* First row - 2 featured projects */}
+            <div className="grid md:grid-cols-2 gap-8">
+              {projects.slice(0, 2).map((project, index) => (
+                <Card 
+                  key={project.id} 
+                  className="group border-0 shadow-lg bg-white/80 backdrop-blur-sm hover:bg-white/90 transition-all duration-300 hover:scale-[1.02] overflow-hidden"
+                >
+                  {/* Project Image */}
+                  <div className="relative overflow-hidden">
+                    <img 
+                      src={project.image} 
+                      alt={project.title}
+                      className="w-full h-56 md:h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <Badge 
+                      className="absolute top-3 left-3 bg-white/90 text-foreground border-0"
+                    >
+                      {project.category}
+                    </Badge>
                   </div>
 
-                  {/* Tools & Timeline */}
-                  <div className="mb-4">
-                    <div className="flex flex-wrap gap-1 mb-2">
-                      {project.tools.map((tool, toolIndex) => (
-                        <Badge key={toolIndex} variant="outline" className="text-xs">
-                          {tool}
-                        </Badge>
-                      ))}
+                  <CardContent className="p-6 md:p-8">
+                    {/* Project Info */}
+                    <div className="mb-6">
+                      <h3 className="font-bold text-xl md:text-2xl mb-2 text-foreground group-hover:text-primary transition-colors">
+                        {project.title}
+                      </h3>
+                      <p className="text-base text-muted-foreground mb-3">{project.subtitle}</p>
+                      <p className="text-sm md:text-base text-foreground leading-relaxed">
+                        {project.description}
+                      </p>
                     </div>
-                    <p className="text-xs text-muted-foreground">
-                      📅 Timeline: {project.timeline}
-                    </p>
+
+                    {/* Tools & Timeline */}
+                    <div className="mb-6">
+                      <div className="flex flex-wrap gap-2 mb-3">
+                        {project.tools.map((tool, toolIndex) => (
+                          <Badge key={toolIndex} variant="outline" className="text-xs">
+                            {tool}
+                          </Badge>
+                        ))}
+                      </div>
+                      <p className="text-sm text-muted-foreground">
+                        📅 Timeline: {project.timeline}
+                      </p>
+                    </div>
+
+                    {/* Features */}
+                    <div className="mb-6">
+                      <ul className="text-sm text-muted-foreground space-y-2">
+                        {project.features.map((feature, featureIndex) => (
+                          <li key={featureIndex} className="flex items-center">
+                            <span className="w-1.5 h-1.5 bg-primary rounded-full mr-3 flex-shrink-0" />
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    {/* Action Button */}
+                    <Button 
+                      variant="outline" 
+                      size="lg" 
+                      className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors"
+                    >
+                      <Figma className="mr-2 h-4 w-4" />
+                      View Case Study
+                    </Button>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
+            {/* Second row - 3 projects in smaller cards */}
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {projects.slice(2).map((project, index) => (
+                <Card 
+                  key={project.id} 
+                  className="group border-0 shadow-lg bg-white/80 backdrop-blur-sm hover:bg-white/90 transition-all duration-300 hover:scale-105 overflow-hidden"
+                >
+                  {/* Project Image */}
+                  <div className="relative overflow-hidden">
+                    <img 
+                      src={project.image} 
+                      alt={project.title}
+                      className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <Badge 
+                      className="absolute top-3 left-3 bg-white/90 text-foreground border-0"
+                    >
+                      {project.category}
+                    </Badge>
                   </div>
 
-                  {/* Features */}
-                  <div className="mb-4">
-                    <ul className="text-xs text-muted-foreground space-y-1">
-                      {project.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center">
-                          <span className="w-1 h-1 bg-primary rounded-full mr-2 flex-shrink-0" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                  <CardContent className="p-6">
+                    {/* Project Info */}
+                    <div className="mb-4">
+                      <h3 className="font-bold text-lg mb-1 text-foreground group-hover:text-primary transition-colors">
+                        {project.title}
+                      </h3>
+                      <p className="text-sm text-muted-foreground mb-2">{project.subtitle}</p>
+                      <p className="text-sm text-foreground leading-relaxed line-clamp-2">
+                        {project.description}
+                      </p>
+                    </div>
 
-                  {/* Action Button */}
-                  <Button 
-                    variant="outline" 
-                    size="sm" 
-                    className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors"
-                  >
-                    <Figma className="mr-2 h-4 w-4" />
-                    View Case Study
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
+                    {/* Tools & Timeline */}
+                    <div className="mb-4">
+                      <div className="flex flex-wrap gap-1 mb-2">
+                        {project.tools.slice(0, 2).map((tool, toolIndex) => (
+                          <Badge key={toolIndex} variant="outline" className="text-xs">
+                            {tool}
+                          </Badge>
+                        ))}
+                        {project.tools.length > 2 && (
+                          <Badge variant="outline" className="text-xs">
+                            +{project.tools.length - 2}
+                          </Badge>
+                        )}
+                      </div>
+                      <p className="text-xs text-muted-foreground">
+                        📅 {project.timeline}
+                      </p>
+                    </div>
+
+                    {/* Action Button */}
+                    <Button 
+                      variant="outline" 
+                      size="sm" 
+                      className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors"
+                    >
+                      <Figma className="mr-2 h-4 w-4" />
+                      View Case Study
+                    </Button>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
 
           {/* Additional Info */}

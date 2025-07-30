@@ -20,7 +20,10 @@ const HeroSection = ({ onNavigate }: HeroSectionProps) => {
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/10" />
       
       <div className="container px-4 mx-auto text-center relative z-10">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto pt-20 md:pt-24">
+          {/* Spacer for better positioning */}
+          <div className="h-16 md:h-20"></div>
+          
           {/* Main heading */}
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent animate-in fade-in slide-in-from-bottom-8 duration-1000">
             Gagandeep D
