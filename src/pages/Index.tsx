@@ -1,12 +1,41 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useEffect } from "react";
+import Navigation from "@/components/Navigation";
+import HeroSection from "@/components/HeroSection";
+import AboutSection from "@/components/AboutSection";
+import ProjectsSection from "@/components/ProjectsSection";
+import ContactSection from "@/components/ContactSection";
 
 const Index = () => {
+  const scrollToSection = (sectionId: string) => {
+    if (sectionId === 'home') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+    
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const navHeight = 80; // Account for fixed navigation
+      const elementTop = element.offsetTop - navHeight;
+      window.scrollTo({ top: elementTop, behavior: 'smooth' });
+    }
+  };
+
+  useEffect(() => {
+    // Add smooth scrolling behavior to the document
+    document.documentElement.style.scrollBehavior = 'smooth';
+    
+    return () => {
+      document.documentElement.style.scrollBehavior = 'auto';
+    };
+  }, []);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen">
+      <Navigation onNavigate={scrollToSection} />
+      <HeroSection onNavigate={scrollToSection} />
+      <AboutSection />
+      <ProjectsSection />
+      <ContactSection />
     </div>
   );
 };
