@@ -14,6 +14,13 @@
     "skipLibCheck": true,
     "allowJs": true,
     "noUnusedLocals": false,
-    "strictNullChecks": false
+    "strictNullChecks": false,
+    "types": ["node"],                      // ✅ Important for path, __dirname
+    "module": "ESNext",                     // ✅ For Vite + modern JS
+    "moduleResolution": "Node",             // ✅ Needed for node_modules compatibility
+    "target": "ESNext",                     // ✅ For modern JS support
+    "esModuleInterop": true,                // ✅ Enables better compatibility
+    "resolveJsonModule": true,              // ✅ If you're importing JSON files
+    "lib": ["DOM", "ESNext"]                // ✅ Required for React + browser + TS
   }
-}
+} 

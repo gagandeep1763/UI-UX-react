@@ -12,7 +12,9 @@ const HomePage = () => {
   return (
     <>
       <HeroSection onNavigate={handleNavigate} />
-      <ProjectsSection />
+      <div id="projects">
+        <ProjectsSection />
+      </div>
     </>
   );
 };

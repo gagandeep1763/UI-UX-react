@@ -1,30 +1,9 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
-import { Menu, X, User, FolderOpen, Mail, Home } from "lucide-react";
-import { cn } from "@/lib/utils";
-import { Link } from "react-router-dom";
-
-export default function Navigation() {
-=======
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, User, FolderOpen, Mail, Home } from "lucide-react";
+import { Link } from "react-router-dom";
 
-interface NavigationProps {
-  onNavigate: (section: string) => void;
-}
-
-const Navigation = ({ onNavigate }: NavigationProps) => {
->>>>>>> bf38bb06c447e39031777e4e22ce82011f97f74b
+const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -33,108 +12,56 @@ const Navigation = ({ onNavigate }: NavigationProps) => {
       setIsScrolled(window.scrollY > 100);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-<<<<<<< HEAD
-  const handleNavClick = (sectionId: string) => {
-    setIsMobileMenuOpen(false);
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  const navItems = [
+    { id: "/", label: "Home", icon: <Home className="h-4 w-4" /> },
+    { id: "/about", label: "About", icon: <User className="h-4 w-4" /> },
+    { id: "/contact", label: "Contact", icon: <Mail className="h-4 w-4" /> },
+  ];
 
   const getButtonClassName = (isScrolled: boolean) =>
     `${
-      isScrolled
-        ? 'text-foreground hover:text-white'
-        : 'text-white/90 hover:text-white'
+      isScrolled ? "text-slate-800 hover:text-white" : "text-white/90 hover:text-white"
     } transition-colors text-shadow-lg rounded-full bg-transparent hover:bg-gradient-to-r from-primary to-accent`;
 
-
-=======
-  const navItems = [
-    { id: 'home', label: 'Home', icon: <Home className="h-4 w-4" /> },
-    { id: 'about', label: 'About', icon: <User className="h-4 w-4" /> },
-    { id: 'projects', label: 'Projects', icon: <FolderOpen className="h-4 w-4" /> },
-    { id: 'contact', label: 'Contact', icon: <Mail className="h-4 w-4" /> },
-  ];
-
-  const handleNavClick = (sectionId: string) => {
-    onNavigate(sectionId);
-    setIsMobileMenuOpen(false);
-  };
-
->>>>>>> bf38bb06c447e39031777e4e22ce82011f97f74b
   return (
     <>
-      {/* Main Navigation */}
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-<<<<<<< HEAD
-          ? 'bg-white/95 backdrop-blur-lg shadow-lg border-b' 
-=======
-          ? 'bg-white/95 backdrop-blur-lg shadow-lg border-b border-border/50' 
->>>>>>> bf38bb06c447e39031777e4e22ce82011f97f74b
-          : 'bg-transparent'
-      }`}>
+      <nav
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          isScrolled
+            ? "bg-white/95 backdrop-blur-lg shadow-lg border-b"
+            : "bg-transparent"
+        }`}
+      >
         <div className="container px-4 mx-auto">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
-<<<<<<< HEAD
-            <Link to="/" className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent hover:scale-105 transition-transform">
-              Gag's portfolio
+            <Link
+              to="/"
+              className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent hover:scale-105 transition-transform"
+            >
+              Gag's Portfolio
             </Link>
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-4">
-              <Button asChild variant="ghost" size="sm" className={getButtonClassName(isScrolled)}>
-                <Link to="/">
-                  <Home className="h-4 w-4" />
-                  <span className="ml-2">Home</span>
-                </Link>
-              </Button>
-              <Button asChild variant="ghost" size="sm" className={getButtonClassName(isScrolled)}>
-                <Link to="/about">
-                  <User className="h-4 w-4" />
-                  <span className="ml-2">About</span>
-                </Link>
-              </Button>
-              <Button asChild variant="ghost" size="sm" className={getButtonClassName(isScrolled)}>
-                <Link to="/contact">
-                  <Mail className="h-4 w-4" />
-                  <span className="ml-2">Contact</span>
-                </Link>
-              </Button>
-=======
-            <button 
-              onClick={() => handleNavClick('home')}
-              className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent hover:scale-105 transition-transform"
-            >
-              Gagandeep D
-            </button>
-
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-2">
               {navItems.map((item) => (
                 <Button
+                  asChild
                   key={item.id}
                   variant="ghost"
                   size="sm"
-                  onClick={() => handleNavClick(item.id)}
-                  className={`${
-                    isScrolled 
-                      ? 'text-foreground hover:text-primary' 
-                      : 'text-foreground/80 hover:text-primary'
-                  } transition-colors`}
+                  className={getButtonClassName(isScrolled)}
                 >
-                  {item.icon}
-                  <span className="ml-2">{item.label}</span>
+                  <Link to={item.id} onClick={() => setIsMobileMenuOpen(false)}>
+                    {item.icon}
+                    <span className="ml-2">{item.label}</span>
+                  </Link>
                 </Button>
               ))}
->>>>>>> bf38bb06c447e39031777e4e22ce82011f97f74b
             </div>
 
             {/* Mobile Menu Button */}
@@ -158,39 +85,20 @@ const Navigation = ({ onNavigate }: NavigationProps) => {
           <div className="md:hidden bg-white/98 backdrop-blur-lg border-t border-border/50">
             <div className="container px-4 mx-auto py-4">
               <div className="flex flex-col space-y-2">
-<<<<<<< HEAD
-                <Button asChild variant="ghost" size="sm" className="justify-start text-foreground hover:text-primary hover:bg-gray-100 rounded-full transition-colors">
-                  <Link to="/" onClick={() => setIsMobileMenuOpen(false)}>
-                    <Home className="h-4 w-4" />
-                    <span className="ml-2">Home</span>
-                  </Link>
-                </Button>
-                <Button asChild variant="ghost" size="sm" className="justify-start text-foreground hover:text-primary hover:bg-gray-100 rounded-full transition-colors">
-                  <Link to="/about" onClick={() => setIsMobileMenuOpen(false)}>
-                    <User className="h-4 w-4" />
-                    <span className="ml-2">About</span>
-                  </Link>
-                </Button>
-                <Button asChild variant="ghost" size="sm" className="justify-start text-foreground hover:text-primary hover:bg-gray-100 rounded-full transition-colors">
-                  <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>
-                    <Mail className="h-4 w-4" />
-                    <span className="ml-2">Contact</span>
-                  </Link>
-                </Button>
-=======
                 {navItems.map((item) => (
                   <Button
+                    asChild
                     key={item.id}
                     variant="ghost"
                     size="sm"
-                    onClick={() => handleNavClick(item.id)}
-                    className="justify-start text-foreground hover:text-primary transition-colors"
+                    className="justify-start text-slate-800 hover:text-primary hover:bg-gray-100 rounded-full transition-colors"
                   >
-                    {item.icon}
-                    <span className="ml-2">{item.label}</span>
+                    <Link to={item.id} onClick={() => setIsMobileMenuOpen(false)}>
+                      {item.icon}
+                      <span className="ml-2">{item.label}</span>
+                    </Link>
                   </Button>
                 ))}
->>>>>>> bf38bb06c447e39031777e4e22ce82011f97f74b
               </div>
             </div>
           </div>
@@ -199,28 +107,19 @@ const Navigation = ({ onNavigate }: NavigationProps) => {
 
       {/* Floating Action Button for Mobile */}
       <div className="fixed bottom-6 right-6 z-40 md:hidden">
-<<<<<<< HEAD
-        <Button asChild variant="gradient" size="icon" className="w-14 h-14 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+        <Button
+          asChild
+          variant="gradient"
+          size="icon"
+          className="w-14 h-14 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+        >
           <Link to="/contact">
             <Mail className="h-6 w-6" />
           </Link>
-=======
-        <Button
-          variant="gradient"
-          size="icon"
-          onClick={() => handleNavClick('contact')}
-          className="w-14 h-14 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-        >
-          <Mail className="h-6 w-6" />
->>>>>>> bf38bb06c447e39031777e4e22ce82011f97f74b
         </Button>
       </div>
     </>
   );
-<<<<<<< HEAD
-}
-=======
 };
 
 export default Navigation;
->>>>>>> bf38bb06c447e39031777e4e22ce82011f97f74b
