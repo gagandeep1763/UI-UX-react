@@ -1,0 +1,13 @@
+react
+react-dom
+vite
+typescript
+tailwindcss
+classnames
+eslint
+eslint-config-prettier
+@vitejs/plugin-react
+@types/react
+@types/react-dom
+@shadcn/ui
+lucide-react
