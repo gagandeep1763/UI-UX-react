@@ -10,6 +10,7 @@ import {
   Palette,
   Users
 } from "lucide-react";
+<<<<<<< HEAD
 import ScrollDownButton from "./ScrollDownButton";
 
 const AboutSection = ({ onNavigate }: { onNavigate: (section: string) => void }) => {
@@ -33,6 +34,30 @@ const AboutSection = ({ onNavigate }: { onNavigate: (section: string) => void })
       icon: <Smartphone className="h-5 w-5" />,
       title: "Smartwatch UIs",
       description: "Created minimal, intuitive interfaces for wearable devices."
+=======
+
+const AboutSection = () => {
+  const experiences = [
+    {
+      icon: <Heart className="h-5 w-5" />,
+      title: "Healthcare apps",
+      description: "Designing intuitive medical interfaces"
+    },
+    {
+      icon: <Globe className="h-5 w-5" />,
+      title: "E-commerce websites", 
+      description: "Creating seamless shopping experiences"
+    },
+    {
+      icon: <TrendingUp className="h-5 w-5" />,
+      title: "Blockchain platforms",
+      description: "Simplifying complex financial interfaces"
+    },
+    {
+      icon: <Users className="h-5 w-5" />,
+      title: "Portfolio redesigns",
+      description: "Crafting personal brand experiences"
+>>>>>>> bf38bb06c447e39031777e4e22ce82011f97f74b
     }
   ];
 
@@ -55,7 +80,11 @@ const AboutSection = ({ onNavigate }: { onNavigate: (section: string) => void })
   ];
 
   return (
+<<<<<<< HEAD
     <section id="about" className="py-10 bg-gradient-to-b from-background to-secondary/30">
+=======
+    <section id="about" className="py-20 bg-gradient-to-b from-background to-secondary/30">
+>>>>>>> bf38bb06c447e39031777e4e22ce82011f97f74b
       <div className="container px-4 mx-auto">
         <div className="max-w-4xl mx-auto">
           {/* Section Header */}
@@ -71,6 +100,7 @@ const AboutSection = ({ onNavigate }: { onNavigate: (section: string) => void })
             <CardContent className="p-8 md:p-12">
               <div className="text-center mb-8">
                 <h3 className="text-2xl md:text-3xl font-semibold mb-6 text-foreground">
+<<<<<<< HEAD
                   Hi, I'm <span className="text-primary font-bold">Gagandeep D.</span>
                 </h3>
                 <p className="text-lg text-muted-foreground leading-relaxed text-justify">
@@ -79,6 +109,15 @@ const AboutSection = ({ onNavigate }: { onNavigate: (section: string) => void })
                   I transform ideas into user-friendly designs that solve real-world problems.
                   <br />
                   I am committed to continuous growth and delivering exceptional results.
+=======
+                  Hi! I'm <span className="text-primary font-bold">Gagandeep D</span>
+                </h3>
+                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                  A dedicated UI/UX Designer based in <Badge variant="outline" className="mx-1">Bangalore</Badge>
+                </p>
+                <p className="text-lg text-foreground leading-relaxed">
+                  I transform ideas into smooth, user-centered digital products that make a difference in people's lives.
+>>>>>>> bf38bb06c447e39031777e4e22ce82011f97f74b
                 </p>
               </div>
             </CardContent>
@@ -97,7 +136,11 @@ const AboutSection = ({ onNavigate }: { onNavigate: (section: string) => void })
                       {principle.icon}
                     </div>
                     <h4 className="font-semibold text-lg mb-2 text-foreground">{principle.title}</h4>
+<<<<<<< HEAD
                     <p className="text-sm text-muted-foreground text-justify">{principle.description}</p>
+=======
+                    <p className="text-sm text-muted-foreground">{principle.description}</p>
+>>>>>>> bf38bb06c447e39031777e4e22ce82011f97f74b
                   </CardContent>
                 </Card>
               ))}
@@ -111,7 +154,11 @@ const AboutSection = ({ onNavigate }: { onNavigate: (section: string) => void })
             </h3>
             <div className="grid md:grid-cols-2 gap-6">
               {experiences.map((exp, index) => (
+<<<<<<< HEAD
                 <Card key={index} className="border-0 shadow-md bg-white/60 backdrop-blur-sm hover:bg-white/80 transition-all duration-300 hover:scale-105">
+=======
+                <Card key={index} className="border-0 shadow-md bg-white/60 backdrop-blur-sm hover:bg-white/80 transition-all duration-300">
+>>>>>>> bf38bb06c447e39031777e4e22ce82011f97f74b
                   <CardContent className="p-6">
                     <div className="flex items-start space-x-4">
                       <div className="w-10 h-10 bg-gradient-to-r from-primary to-accent rounded-lg flex items-center justify-center text-white flex-shrink-0">
@@ -119,7 +166,11 @@ const AboutSection = ({ onNavigate }: { onNavigate: (section: string) => void })
                       </div>
                       <div>
                         <h4 className="font-semibold text-lg mb-1 text-foreground">{exp.title}</h4>
+<<<<<<< HEAD
                         <p className="text-sm text-muted-foreground text-justify">{exp.description}</p>
+=======
+                        <p className="text-sm text-muted-foreground">{exp.description}</p>
+>>>>>>> bf38bb06c447e39031777e4e22ce82011f97f74b
                       </div>
                     </div>
                   </CardContent>
@@ -129,13 +180,21 @@ const AboutSection = ({ onNavigate }: { onNavigate: (section: string) => void })
           </div>
 
           {/* Learning */}
+<<<<<<< HEAD
           <Card className="border-0 shadow-lg bg-gradient-to-r from-primary/10 to-accent/10 backdrop-blur-sm hover:shadow-xl hover:scale-105 transition-all duration-300 hover:bg-primary/20">
+=======
+          <Card className="border-0 shadow-lg bg-gradient-to-r from-primary/10 to-accent/10 backdrop-blur-sm">
+>>>>>>> bf38bb06c447e39031777e4e22ce82011f97f74b
             <CardContent className="p-8 text-center">
               <Smartphone className="h-12 w-12 mx-auto mb-4 text-primary" />
               <h3 className="text-xl font-semibold mb-4 text-foreground">
                 🌱 Always Learning
               </h3>
+<<<<<<< HEAD
               <p className="text-muted-foreground leading-relaxed mb-6 text-justify">
+=======
+              <p className="text-muted-foreground leading-relaxed mb-6">
+>>>>>>> bf38bb06c447e39031777e4e22ce82011f97f74b
                 With hands-on project experience, internships, and constant curiosity, 
                 I stay updated with the latest design trends and user experience best practices.
               </p>
@@ -144,11 +203,18 @@ const AboutSection = ({ onNavigate }: { onNavigate: (section: string) => void })
               </p>
             </CardContent>
           </Card>
+<<<<<<< HEAD
           <ScrollDownButton onNavigate={onNavigate} sectionId="projects" />
+=======
+>>>>>>> bf38bb06c447e39031777e4e22ce82011f97f74b
         </div>
       </div>
     </section>
   );
 };
 
+<<<<<<< HEAD
 export default AboutSection;
+=======
+export default AboutSection;
+>>>>>>> bf38bb06c447e39031777e4e22ce82011f97f74b

@@ -33,8 +33,13 @@ const Index = () => {
     <div className="min-h-screen">
       <Navigation onNavigate={scrollToSection} />
       <HeroSection onNavigate={scrollToSection} />
+<<<<<<< HEAD
       <AboutSection onNavigate={scrollToSection} />
       <ProjectsSection onNavigate={scrollToSection} />
+=======
+      <AboutSection />
+      <ProjectsSection />
+>>>>>>> bf38bb06c447e39031777e4e22ce82011f97f74b
       <ContactSection />
     </div>
   );

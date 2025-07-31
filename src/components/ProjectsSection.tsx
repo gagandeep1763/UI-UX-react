@@ -2,12 +2,19 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Figma } from "lucide-react";
+<<<<<<< HEAD
 import ScrollDownButton from "@/components/ScrollDownButton";
+=======
+>>>>>>> bf38bb06c447e39031777e4e22ce82011f97f74b
 import smartsonicImage from "@/assets/project-smartsonic.jpg";
 import rcbImage from "@/assets/project-rcb.jpg";
 import eventImage from "@/assets/project-event.jpg";
 import gopravaasaImage from "@/assets/project-gopravasa.jpg";
 import uberImage from "@/assets/project-uber.jpg";
+<<<<<<< HEAD
+=======
+
+>>>>>>> bf38bb06c447e39031777e4e22ce82011f97f74b
 const ProjectsSection = () => {
   const projects = [
     {
@@ -73,11 +80,21 @@ const ProjectsSection = () => {
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16">
+<<<<<<< HEAD
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
               Project Experience
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Each project is a case study solving a real-world UI/UX problem with clear solutions shown through user flow, wireframes, and final designs.
+=======
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              Selected Projects
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full mb-8" />
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Here are some of the UI/UX projects I've designed. Each includes user flow, wireframes, 
+              final UI screens, and reasoning behind design decisions.
+>>>>>>> bf38bb06c447e39031777e4e22ce82011f97f74b
             </p>
           </div>
 
@@ -224,6 +241,7 @@ const ProjectsSection = () => {
               ))}
             </div>
           </div>
+<<<<<<< HEAD
  
         </div>
       </div>
@@ -232,3 +250,35 @@ const ProjectsSection = () => {
 };
 
 export default ProjectsSection;
+=======
+
+          {/* Additional Info */}
+          <Card className="border-0 shadow-lg bg-gradient-to-r from-primary/10 to-accent/10 backdrop-blur-sm">
+            <CardContent className="p-8 text-center">
+              <h3 className="text-xl font-semibold mb-4 text-foreground">
+                🔍 Detailed Case Studies
+              </h3>
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                Each project includes comprehensive user flow analysis, wireframes, final UI screens, 
+                and detailed reasoning behind design decisions. Click on any project to explore the full process.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Button variant="outline" size="sm">
+                  <ExternalLink className="mr-2 h-4 w-4" />
+                  View All on Figma
+                </Button>
+                <Button variant="outline" size="sm">
+                  <ExternalLink className="mr-2 h-4 w-4" />
+                  Behance Portfolio
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ProjectsSection;
+>>>>>>> bf38bb06c447e39031777e4e22ce82011f97f74b
