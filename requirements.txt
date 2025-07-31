@@ -14,4 +14,4 @@ inflight@1.0.6
 @humanwhocodes/config-array@0.13.0
 @humanwhocodes/object-schema@2.0.3
 glob@7.2.3
-rollup@3.29.4
+rollup@3.28.1
