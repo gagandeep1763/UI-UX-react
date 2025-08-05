@@ -1,8 +1,8 @@
-import aidpointImage from "@/assets/project-aidpoint.jpg";
-import rcbImage from "@/assets/project-rcb.jpg";
-import eventImage from "@/assets/project-event.jpg";
+import aidpointImage from "@/assets/casestudy-project1.1.jpg";
+import rcbImage from "@/assets/casestudy-project2.1.jpg";
+import tanjoreCoffeeImage from "@/assets/casestudy-project3.1.jpg";
 import smartSonicImage from "@/assets/casestudy-project4.1.jpg";
-import framersWatchImage from "@/assets/Project-framers.jpg";
+import framersWatchImage from "@/assets/casestudy-project5.6.jpg";
 
 export const projects = [
   {
@@ -17,32 +17,32 @@ export const projects = [
     features: ["Responsive Design", "Emergency Contact", "Emergency Tools"]
   },
   {
-    id: "rcb",
-    title: "RCB Fan Site",
-    subtitle: "IPL Team Redesign",
-    description: "Complete redesign of Royal Challengers Bangalore fan website with modern UI and enhanced user engagement.",
+    id: "nesara",
+    title: "Nesara",
+    subtitle: "Women’s Safety App Design",
+    description: "A responsive mobile and web app offering free self-defense training, live safety sessions, and instant access to emergency help through calls, chats, and alert tools.",
     image: rcbImage,
-    category: "Sports",
-    tools: ["Figma", "Prototyping", "User Testing"],
-    timeline: "2 Weeks",
-    features: ["Team Branding", "Match Updates", "Fan Community"]
+    category: "Safety",
+    tools: ["Figma", "UX Research", "Wireframes"],
+    timeline: "1 Week",
+    features: ["Responsive Design", "Self-Defense Tutorials", "Emergency Support Tools"]
   },
   {
-    id: "event",
-    title: "Event Booking Website",
-    subtitle: "Ticket Platform",
-    description: "Streamlined event discovery and booking platform with intuitive calendar integration and payment flow.",
-    image: eventImage,
-    category: "Entertainment",
-    tools: ["Figma", "User Journey", "Wireframes"],
-    timeline: "3 Weeks",
-    features: ["Calendar Integration", "Payment Flow", "Event Discovery"]
+    id: "tanjore-coffee",
+    title: "Redesign for Tanjore Degree Coffee",
+    subtitle: "Coffee Website Redesign",
+    description: "Revamped a website for Tanjore Coffee to enhance user experience and showcase its authentic South Indian flavor.",
+    image: tanjoreCoffeeImage,
+    category: "Food & Beverage",
+    tools: ["Figma", "User Research", "Prototyping"],
+    timeline: "4 Days",
+    features: ["Visual Redesign", "Enhanced UX", "Brand Storytelling"]
   },
   {
     id: "smart-sonic",
     title: "Smart Sonic Toothbrush",
     subtitle: "Product Website",
-    description: "A sleek, modern website for Smart Sonic, promoting a tech-driven toothbrush focused on innovation and brighter smiles.",
+    description: "A sleek, modern website for Smart Sonic, promoting a tech-driven toothbrush focused on innovation and brighter smiles. This project was done as a part of a digital marketing internship.",
     image: smartSonicImage,
     category: "Tech Marketing",
     tools: ["Figma", "User Research", "Prototyping"],

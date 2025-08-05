@@ -29,7 +29,7 @@ const SmartSonicCaseStudy = () => {
                 <span className="font-semibold">Domain:</span> Digital Marketing, UI/UX Design
               </p>
               <p className="text-sm text-gray-500 mb-2">
-                <span className="font-semibold">Tools Used:</span> Figma | Canva | Meta Business Suite | Google Docs | Instagram
+                <span className="font-semibold">Tools Used:</span> Figma | User Research | Prototyping
               </p>
               <p className="text-sm text-gray-500 mb-2">
                 <span className="font-semibold">Timeline:</span> 2 Weeks

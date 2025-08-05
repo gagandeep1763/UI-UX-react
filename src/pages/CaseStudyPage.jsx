@@ -5,6 +5,8 @@ import { ArrowLeft } from "lucide-react";
 import AidPointCaseStudy from "./CaseStudy/AidPointCaseStudy";
 import FramersCaseStudy from "./CaseStudy/FramersCaseStudy";
 import SmartSonicCaseStudy from "./CaseStudy/SmartSonicCaseStudy";
+import TanjoreCoffeeCaseStudy from "./CaseStudy/TanjoreCoffeeCaseStudy";
+import NesaraCaseStudy from "./CaseStudy/NesaraCaseStudy";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const CaseStudyPage = () => {
@@ -26,6 +28,14 @@ const CaseStudyPage = () => {
 
   if (project.id === "smart-sonic") {
     return <SmartSonicCaseStudy />;
+  }
+
+  if (project.id === "tanjore-coffee") {
+    return <TanjoreCoffeeCaseStudy />;
+  }
+
+  if (project.id === "nesara") {
+    return <NesaraCaseStudy />;
   }
 
   return (

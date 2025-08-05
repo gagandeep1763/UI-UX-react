@@ -8,7 +8,7 @@ const ScrollDownButton = ({ onNavigate, sectionId }) => {
         variant="ghost" 
         size="sm"
         onClick={() => onNavigate(sectionId)}
-        className="animate-bounce"
+        className="animate-slow-bounce"
       >
         <ArrowDown className="h-4 w-4" />
       </Button>
