@@ -1,8 +1,8 @@
 import aidpointImage from "@/assets/project-aidpoint.jpg";
 import rcbImage from "@/assets/project-rcb.jpg";
 import eventImage from "@/assets/project-event.jpg";
-import gopravaasaImage from "@/assets/project-gopravasa.jpg";
-import uberImage from "@/assets/project-uber.jpg";
+import smartSonicImage from "@/assets/casestudy-project4.1.jpg";
+import framersWatchImage from "@/assets/Project-framers.jpg";
 
 export const projects = [
   {
@@ -39,25 +39,25 @@ export const projects = [
     features: ["Calendar Integration", "Payment Flow", "Event Discovery"]
   },
   {
-    id: "gopravasa",
-    title: "Gopravasa",
-    subtitle: "Ecommerce Web Design",
-    description: "Travel and tourism e-commerce platform focusing on seamless booking experience and destination exploration.",
-    image: gopravaasaImage,
-    category: "Travel",
+    id: "smart-sonic",
+    title: "Smart Sonic Toothbrush",
+    subtitle: "Product Website",
+    description: "A sleek, modern website for Smart Sonic, promoting a tech-driven toothbrush focused on innovation and brighter smiles.",
+    image: smartSonicImage,
+    category: "Tech Marketing",
     tools: ["Figma", "User Research", "Prototyping"],
     timeline: "2 Weeks",
-    features: ["Booking System", "Destination Guides", "Travel Planning"]
+    features: ["Product Showcase", "Interactive Demo", "Shop Integration"]
   },
   {
-    id: "uber",
-    title: "Uber Website Redesign",
-    subtitle: "UI/UX in Figma",
-    description: "Modern redesign of Uber's web platform with improved navigation and enhanced user experience.",
-    image: uberImage,
-    category: "Transportation",
+    id: "framers-watch",
+    title: "Framers Smart Watch Redesign",
+    subtitle: "Smart Watch UI/UX",
+    description: "The Framers smartwatch redesign emphasizes clarity, usability, and bold branding.",
+    image: framersWatchImage,
+    category: "Watch",
     tools: ["Figma", "Design System", "Prototyping"],
-    timeline: "1 Week",
+    timeline: "3 Days",
     features: ["Navigation Redesign", "Booking Flow", "Mobile Responsive"]
   }
 ];

@@ -23,8 +23,17 @@ const AidPointCaseStudy = () => {
               <p className="text-sm text-gray-500 mb-2">
                 <span className="font-semibold">Category:</span> HealthTech | First Aid | Emergency UX
               </p>
-              <p className="text-sm text-gray-500">
+              <p className="text-sm text-gray-500 mb-2">
                 <span className="font-semibold">Project Focus:</span> UX Research, UI/UX Design
+              </p>
+              <p className="text-sm text-gray-500 mb-2">
+                <span className="font-semibold">Tools Used:</span> Figma | UX Research | Wireframes
+              </p>
+              <p className="text-sm text-gray-500 mb-2">
+                <span className="font-semibold">Timeline:</span> 1 Week
+              </p>
+              <p className="text-sm text-gray-500">
+                <span className="font-semibold">Key Features:</span> Responsive Design | Emergency Contact | Emergency Tools
               </p>
             </div>
           </div>
@@ -33,7 +42,7 @@ const AidPointCaseStudy = () => {
         <div className="bg-white p-6 rounded-lg shadow-lg mb-8">
           <h2 className="text-2xl font-bold mb-3">Problem Statement</h2>
           <p className="text-gray-700">
-            Many individuals lack access to proper first aid education and panic during emergencies due to the absence of a centralized, reliable resource. Users often struggle to find trustworthy guidance on first aid procedures or connect with emergency services swiftly.
+            Many individuals today lack access to proper first aid education, which leaves them unprepared and prone to panic during emergencies. This often stems from the absence of a centralized, reliable, and easy-to-understand resource that can guide them in critical moments. Users frequently struggle to find trustworthy information on how to respond to medical emergencies or to connect quickly with the appropriate emergency services. This gap can lead to delays in providing essential care, putting lives at risk.
           </p>
         </div>
 
@@ -49,34 +58,42 @@ const AidPointCaseStudy = () => {
           </ul>
         </div>
 
-        <div className="bg-white p-6 rounded-lg shadow-lg mb-8">
-            <h2 className="text-2xl font-bold mb-3">Research Approach</h2>
-            <p className="text-gray-700">
-              Conducted interviews with individuals in the age group of 18–40 to understand their awareness of first aid and expectations in emergencies.
-            </p>
-            <p className="text-gray-700 mt-2">
-              <span className="font-bold">Key finding:</span> Users want simple, fast, and reliable information and emergency response tools in one app.
-            </p>
-        </div>
-
         <div className="grid md:grid-cols-2 gap-8 mb-8">
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h2 className="text-2xl font-bold mb-3">Target Users</h2>
-              <ul className="list-disc list-inside text-gray-700 space-y-1">
-                <li>Students, parents, teachers, and the general public</li>
-                <li>Especially people in areas with limited first responder access</li>
-              </ul>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h2 className="text-2xl font-bold mb-3">Pain Points</h2>
-              <ul className="list-disc list-inside text-gray-700 space-y-1">
-                <li>Inability to recall first aid steps in stressful moments</li>
-                <li>Lack of awareness about whom to contact</li>
-                <li>Frustration from navigating multiple apps in emergencies</li>
-              </ul>
-            </div>
+          <div className="bg-white p-6 rounded-lg shadow-lg">
+            <h2 className="text-2xl font-bold mb-3">Pain Points</h2>
+            <ul className="list-disc list-inside text-gray-700 space-y-1">
+              <li>Inability to recall first aid steps in stressful moments</li>
+              <li>Lack of awareness about whom to contact</li>
+              <li>Frustration from navigating multiple apps in emergencies</li>
+            </ul>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-lg">
+            <h2 className="text-2xl font-bold mb-3">Target Users</h2>
+            <ul className="list-disc list-inside text-gray-700 space-y-1">
+              <li>Students, parents, teachers, and the general public</li>
+              <li>Especially people in areas with limited first responder access</li>
+            </ul>
+          </div>
         </div>
 
+        <div className="bg-white p-6 rounded-lg shadow-lg mb-8">
+          <h2 className="text-2xl font-bold mb-3">Research Approach (UI/UX)</h2>
+          <ul className="list-disc list-inside text-gray-700 space-y-2 mb-6">
+            <li><strong>User Interviews:</strong> Interacted with users from various backgrounds to understand their experiences, challenges, and emotions during medical emergencies.</li>
+            <li><strong>Surveys:</strong> Conducted surveys to assess general awareness of first aid and the accessibility of emergency resources.</li>
+            <li><strong>Competitive Analysis:</strong> Evaluated current first aid apps and platforms to identify usability gaps, missing features, and design shortcomings.</li>
+            <li><strong>Persona Development:</strong> Built user personas to represent target users and align design decisions with real-world needs and behavior patterns.</li>
+          </ul>
+            <hr className="my-4" />
+            <h2 className="text-2xl font-bold mb-3">UX Design Process</h2>
+            <ul className="list-disc list-inside text-gray-700 space-y-2">
+                <li><strong>Empathize</strong> – Gathered insights from research to understand user needs, fears, and priorities.</li>
+                <li><strong>Define</strong> – Clearly outlined the main problems: lack of first aid knowledge, confusion in emergencies, and difficulty reaching help.</li>
+                <li><strong>Ideate</strong> – Brainstormed multiple solutions, sketched wireframes, and shortlisted features that directly solve user problems.</li>
+                <li><strong>Prototype</strong> – Designed low-fidelity wireframes and digital prototypes with a focus on simplicity, clarity, and quick access in urgent scenarios.</li>
+                <li><strong>Test</strong> – Shared prototypes for feedback, analyzed user responses, and improved the design for better usability and emergency readiness.</li>
+            </ul>
+        </div>
         <div className="bg-white p-6 rounded-lg shadow-lg mb-8">
           <h2 className="text-2xl font-bold mb-3">Paper Wireframes</h2>
           <p className="text-gray-700 mb-4">

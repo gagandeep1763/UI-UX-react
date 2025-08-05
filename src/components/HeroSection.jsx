@@ -7,7 +7,7 @@ import ScrollDownButton from "./ScrollDownButton";
 const HeroSection = ({ onNavigate }) => {
   return (
     <section
-      className="relative min-h-screen flex items-center justify-center bg-white overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center bg-white overflow-hidden animate-fade-in"
     >
       <div className="absolute top-0 left-0 w-full h-full">
         <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-pink-200 rounded-full animate-blob animation-delay-2000"></div>
@@ -18,7 +18,7 @@ const HeroSection = ({ onNavigate }) => {
         <div className="max-w-6xl mx-auto pt-20 md:pt-24">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
-            <div className="text-left animate-in fade-in slide-in-from-left-8 duration-1000">
+            <div className="text-left animate-slide-up">
               <h1 className="text-7xl md:text-8xl font-bold leading-tight bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                 GAG'S
                 <br />
@@ -27,7 +27,7 @@ const HeroSection = ({ onNavigate }) => {
             </div>
 
             {/* Right Content */}
-            <div className="text-left animate-in fade-in slide-in-from-right-8 duration-1000 delay-200">
+            <div className="text-left animate-slide-up [animation-delay:200ms]">
               <Card className="bg-white/80 backdrop-blur-sm shadow-lg">
                 <CardContent className="p-6">
                   <p className="text-base md:text-lg text-gray-800 mb-8 leading-relaxed">
