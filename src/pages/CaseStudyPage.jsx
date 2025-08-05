@@ -2,6 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import { projects } from "@/data/projects";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
+import AidPointCaseStudy from "./CaseStudy/AidPointCaseStudy";
 
 const CaseStudyPage = () => {
   const { id } = useParams();
@@ -9,6 +10,10 @@ const CaseStudyPage = () => {
 
   if (!project) {
     return <div>Project not found</div>;
+  }
+
+  if (project.id === "aidpoint") {
+    return <AidPointCaseStudy />;
   }
 
   return (

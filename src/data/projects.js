@@ -1,4 +1,4 @@
-import smartsonicImage from "@/assets/project-smartsonic.jpg";
+import aidpointImage from "@/assets/project-aidpoint.jpg";
 import rcbImage from "@/assets/project-rcb.jpg";
 import eventImage from "@/assets/project-event.jpg";
 import gopravaasaImage from "@/assets/project-gopravasa.jpg";
@@ -6,15 +6,15 @@ import uberImage from "@/assets/project-uber.jpg";
 
 export const projects = [
   {
-    id: "smartsonic",
-    title: "SmartSonic Electric Toothbrush",
-    subtitle: "Website Design",
-    description: "Modern, eco-friendly e-commerce site promoting bamboo electric toothbrushes with recycling program integration.",
-    image: smartsonicImage,
-    category: "E-commerce",
+    id: "aidpoint",
+    title: "Aid Point",
+    subtitle: "Health App Design",
+    description: "All-in-one mobile app for first aid learning with case studies and quizzes, emergency contacts, and quick-response tools like chat, call, and emergency codes.",
+    image: aidpointImage,
+    category: "Health",
     tools: ["Figma", "UX Research", "Wireframes"],
     timeline: "1 Week",
-    features: ["Responsive Design", "Eco-friendly Branding", "Checkout Flow"]
+    features: ["Responsive Design", "Emergency Contact", "Emergency Tools"]
   },
   {
     id: "rcb",
