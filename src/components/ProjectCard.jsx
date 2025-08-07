@@ -26,9 +26,9 @@ const ProjectCard = ({ project, fullDetails = false, delay = 0 }) => {
             {project.category}
           </Badge>
         </div>
-        <CardContent className="p-6 flex flex-col flex-grow">
+        <CardContent className="p-4 sm:p-6 flex flex-col flex-grow">
           <div className="mb-4">
-            <h3 className="text-xl font-bold text-foreground mb-1 group-hover:text-primary transition-colors">
+            <h3 className="text-lg md:text-xl font-bold text-foreground mb-1 group-hover:text-primary transition-colors">
               {project.title}
             </h3>
             <p className="text-sm text-muted-foreground font-medium">

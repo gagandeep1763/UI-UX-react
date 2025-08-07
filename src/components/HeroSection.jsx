@@ -19,7 +19,7 @@ const HeroSection = ({ onNavigate }) => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
             <div className="text-left animate-slide-up">
-              <h1 className="text-7xl md:text-8xl font-bold leading-tight bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-tight bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                 GAG'S
                 <br />
                 PORTFOLIO
@@ -29,7 +29,7 @@ const HeroSection = ({ onNavigate }) => {
             {/* Right Content */}
             <div className="text-left animate-slide-up [animation-delay:200ms]">
               <Card className="bg-white/80 backdrop-blur-sm shadow-lg">
-                <CardContent className="p-6">
+                <CardContent className="p-4 sm:p-6">
                   <p className="text-base md:text-lg text-gray-800 mb-8 leading-relaxed">
                     I'm Gagandeep D., a <span className="text-pink-500 font-semibold">UI/UX designer</span> and <span className="text-purple-500 font-semibold">technologist</span> passionate about creating intuitive, user-centered digital experiences. I design clean interfaces, thoughtful user flows, and responsive layouts that not only solve real-world problems but also build trust and leave a lasting impression. I believe great design is functional, engaging, and impactful.
                   </p>

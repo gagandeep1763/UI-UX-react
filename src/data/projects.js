@@ -1,8 +1,8 @@
-import aidpointImage from "@/assets/casestudy-project1.1.jpg";
+import aidpointImage from "@/assets/project-aidpoint.jpg";
 import rcbImage from "@/assets/casestudy-project2.1.jpg";
 import tanjoreCoffeeImage from "@/assets/casestudy-project3.1.jpg";
 import smartSonicImage from "@/assets/casestudy-project4.1.jpg";
-import framersWatchImage from "@/assets/casestudy-project5.6.jpg";
+import framersWatchImage from "@/assets/Project-framers.jpg";
 
 export const projects = [
   {

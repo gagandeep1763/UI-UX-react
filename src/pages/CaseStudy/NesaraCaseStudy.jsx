@@ -1,23 +1,18 @@
 import React from "react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import nesaraImage from "@/assets/casestudy-project2.1.jpg";
-import wireframeImage from "@/assets/casestudy-project2.2.jpg";
-import prototypeImage from "@/assets/casestudy-project2.3.jpg";
-
-const AnimatedCard = ({ title, children, className }) => {
-  const [ref, isVisible] = useScrollAnimation({ threshold: 0.1 });
-  return (
-    <div
-      ref={ref}
-      className={`bg-white p-8 rounded-xl shadow-lg mb-12 transition-all duration-700 ${
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-      } ${className}`}
-    >
-      <h2 className="text-3xl font-bold mb-6 text-gray-800 border-b pb-4">{title}</h2>
-      <div className="text-gray-700 leading-relaxed">{children}</div>
-    </div>
-  );
-};
+import goalImage from "@/assets/casestudy-project2.4.jpg";
+import conclusionImage from "@/assets/casestudy-project2.3.jpg";
+import finalImage1 from "@/assets/casestudy-project2.2.jpg";
+import finalImage2 from "@/assets/casestudy-project2.5.jpg";
+import finalImage3 from "@/assets/casestudy-project2.6.jpg";
+import digitalPrototypeImage1 from "@/assets/casestudy-project2.7.png";
+import digitalPrototypeImage2 from "@/assets/casestudy-project2.8.png";
+import paperWireframe1 from "@/assets/casestudy-project2.9.jpg";
+import paperWireframe2 from "@/assets/casestudy-project2.10.jpg";
+import paperWireframe3 from "@/assets/casestudy-project2.11.jpg";
+import paperWireframe4 from "@/assets/casestudy-project2.12.jpg";
+import AnimatedCard from "@/components/AnimatedCard";
 
 const NesaraCaseStudy = () => {
   const [headerRef, isHeaderVisible] = useScrollAnimation({ threshold: 0.2 });
@@ -33,11 +28,11 @@ const NesaraCaseStudy = () => {
         >
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 p-4">
-              <img src={nesaraImage} alt="Nesara App" className="rounded-lg shadow-lg" />
+              <img src={nesaraImage} alt="Nesara App" className="rounded-lg shadow-lg w-full h-auto" />
             </div>
             <div className="md:w-1/2 p-4 flex flex-col justify-center items-center text-center">
-              <h1 className="text-5xl font-extrabold mb-4 text-gray-900">Nesara: Women Safety App</h1>
-              <p className="text-xl text-gray-600 mb-6">
+              <h1 className="text-4xl md:text-5xl font-extrabold mb-4 text-gray-900">Nesara: Women Safety App</h1>
+              <p className="text-lg md:text-xl text-gray-600 mb-6">
                 A responsive web and mobile application for self-defense training and emergency support.
               </p>
               <div className="text-left space-y-2 text-gray-600">
@@ -48,127 +43,135 @@ const NesaraCaseStudy = () => {
           </div>
         </div>
 
-        <AnimatedCard title="🎯 Goal">
+        <AnimatedCard title="Problem Statement">
           <p>
-            To design a responsive web and mobile application that provides free self-defense training, offers instant emergency support, and encourages confidence and awareness through interactive learning and community support.
+            Many women face safety threats and lack access to proper self-defense training or quick emergency help. Existing safety apps often miss combining both. There's a need for a simple, responsive platform that offers both self-defense education and instant support in emergencies.
           </p>
         </AnimatedCard>
 
-        <AnimatedCard title="😣 Pain Points">
+        <AnimatedCard title="Goal">
           <ul className="list-disc list-inside space-y-3 mt-4 text-lg">
-            <li>Lack of access to free, quality self-defense content.</li>
-            <li>Delay in accessing emergency help.</li>
-            <li>Difficulty navigating multiple platforms in high-stress situations.</li>
-            <li>Fear of safety when commuting or staying alone.</li>
+            <li>Empowers women with structured self-defense education through video tutorials and live sessions</li>
+            <li>Enables instant access to emergency support using features like SOS, GPS tracking, and emergency codes</li>
+            <li>Promotes emotional well-being and safety awareness through community forums, expert support.</li>
           </ul>
         </AnimatedCard>
 
-        <AnimatedCard title="🧠 Research Approach">
-          <ul className="list-disc list-inside space-y-3 mt-4 text-lg">
-            <li><strong>User Interviews:</strong> Conducted interviews with women from different age groups to understand their daily safety concerns.</li>
-            <li><strong>Surveys:</strong> Collected data on access to safety tools and which features they would trust.</li>
-            <li><strong>Competitor Analysis:</strong> Analyzed existing apps to identify design gaps and complicated emergency access systems.</li>
-            <li><strong>Persona Development:</strong> Created realistic personas reflecting the emotions, frustrations, and goals of target users.</li>
-          </ul>
-        </AnimatedCard>
-
-        <AnimatedCard title="💡 UX Design Process">
-          <p>
-            The design process followed a user-centered approach to ensure the final product was intuitive, accessible, and comforting.
-          </p>
-          <ol className="list-decimal list-inside space-y-3 mt-4 text-lg">
-            <li><strong>Empathize:</strong> Captured real-life safety experiences to understand stress factors.</li>
-            <li><strong>Define:</strong> Framed core problems like lack of accessible training and ineffective emergency triggers.</li>
-            <li><strong>Ideate:</strong> Brainstormed features like video tutorials, panic button, and live training alerts.</li>
-            <li><strong>Prototype:</strong> Developed low-fidelity paper wireframes, followed by high-fidelity digital prototypes in Figma.</li>
-            <li><strong>Test:</strong> Tested prototypes with users for accessibility, speed, and emotional comfort.</li>
-          </ol>
-        </AnimatedCard>
-
-        <div className="grid md:grid-cols-2 gap-12 mb-12">
-            <div className="flex items-center justify-center">
-                <img src={wireframeImage} alt="Paper Wireframes" className="rounded-lg shadow-lg w-full" />
-            </div>
-            <AnimatedCard title="✍️ Paper Wireframes" className="h-full">
-                <p>Initial sketches focusing on:</p>
-                <ul className="list-disc list-inside space-y-3 mt-4">
-                    <li>Home with quick SOS</li>
-                    <li>Training dashboard</li>
-                    <li>Live session reminders</li>
-                    <li>Emergency services card section</li>
+        <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <AnimatedCard title="5 W’s – Nesara App" className="mb-0">
+                <ul className="list-disc list-inside space-y-3 mt-4 text-lg">
+                    <li><span className="font-semibold">Who?</span> Women seeking safety, self-defense, and emergency support.</li>
+                    <li><span className="font-semibold">What?</span> A mobile/web app offering self-defense training, SOS tools, and mental wellness.</li>
+                    <li><span className="font-semibold">When?</span> During unsafe situations—travel, isolation, or unexpected danger.</li>
+                    <li><span className="font-semibold">Where?</span> Usable anywhere—home, public places, transport, workplaces.</li>
+                    <li><span className="font-semibold">Why?</span> To empower women with the tools and knowledge to act confidently in emergencies.</li>
+                </ul>
+            </AnimatedCard>
+            <AnimatedCard title="Problems in Current Safety Apps" className="mb-0">
+                <ul className="list-disc list-inside space-y-3 mt-4 text-lg">
+                    <li>Lack of structured self-defense learning – Most apps focus only on SOS and ignore preventive training.</li>
+                    <li>Confusing or slow emergency access – During panic, multiple steps or unclear interfaces fail.</li>
+                    <li>No emotional support – Mental well-being and confidence-building tools are often missing.</li>
+                    <li>Poor UI/UX under pressure – Complex or cluttered layouts increase response time in emergencies.</li>
+                    <li>Disjointed tools – Users must use separate apps for safety tips, emergency alerts, and community support.</li>
                 </ul>
             </AnimatedCard>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 mb-12">
-            <AnimatedCard title="💻 Digital Prototypes" className="h-full">
-                <p>Created responsive designs for both web and mobile using Figma. Focused on:</p>
-                <ul className="list-disc list-inside space-y-3 mt-4">
-                    <li>Clean UI with bold, readable text and calming color schemes.</li>
-                    <li>Prominent emergency action buttons.</li>
-                    <li>Personalized dashboard with upcoming sessions, tutorial progress, and emergency contact setup.</li>
-                </ul>
+        <AnimatedCard title="Research & UX Process Overview">
+          <ul className="list-disc list-inside space-y-2">
+            <li>Conducted interviews and surveys with women to understand real fears, daily risks, and expectations from safety apps.</li>
+            <li>Analyzed popular safety apps to identify gaps in emergency access, interface clarity, and usability.</li>
+            <li>Created user personas and mapped out emotional journeys to guide design choices.</li>
+            <li>Researched Indian laws on women’s safety and worked briefly as a volunteer to understand on-ground emergency response.</li>
+            <li>Followed a full UX design process: empathize → define → ideate → prototype → test, ensuring the app stayed reliable under real stress.</li>
+          </ul>
+        </AnimatedCard>
+
+        <div className="grid md:grid-cols-1 gap-12 mb-12">
+            <AnimatedCard title="Paper Wireframes" className="h-full">
+                <p>These initial sketches helped explore core layouts and user flows for Aid Point. Some early ideas were later refined or removed as stronger design solutions emerged during the digital wireframing phase.</p>
+                <div className="grid md:grid-cols-4 gap-8 mt-8">
+                    <img src={paperWireframe1} alt="Paper Wireframe 1" className="rounded-lg shadow-lg w-full h-auto" />
+                    <img src={paperWireframe2} alt="Paper Wireframe 2" className="rounded-lg shadow-lg w-full h-auto" />
+                    <img src={paperWireframe3} alt="Paper Wireframe 3" className="rounded-lg shadow-lg w-full h-auto" />
+                    <img src={paperWireframe4} alt="Paper Wireframe 4" className="rounded-lg shadow-lg w-full h-auto" />
+                </div>
             </AnimatedCard>
-            <div className="flex items-center justify-center">
-                <img src={prototypeImage} alt="Digital Prototypes" className="rounded-lg shadow-lg w-full" />
-            </div>
         </div>
 
-        <AnimatedCard title="🚀 Core Features">
-          <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-1 gap-12 mb-12">
+            <AnimatedCard title="Digital Prototypes" className="h-full">
+                <p>An interactive Figma prototype showcasing user flows from onboarding to emergency features, designed for clarity, speed, and accessibility</p>
+                <div className="grid md:grid-cols-2 gap-8 mt-8">
+                    <img src={digitalPrototypeImage1} alt="Digital Prototype 1" className="rounded-lg shadow-lg w-full h-auto object-contain" />
+                    <img src={digitalPrototypeImage2} alt="Digital Prototype 2" className="rounded-lg shadow-lg w-full h-auto object-contain" />
+                </div>
+            </AnimatedCard>
+        </div>
+
+        <AnimatedCard title="Core Features (UI/UX)">
+          <div className="grid md:grid-cols-2 gap-8">
             <div>
               <h3 className="text-2xl font-semibold mb-4 text-gray-800">Self-Defense Learning Hub</h3>
               <ul className="list-disc list-inside space-y-2">
-                <li>Structured video tutorials (Beginner → Advanced)</li>
-                <li>Live sessions with trainers</li>
-                <li>Progress tracker and certificates</li>
+                <li>Structured video tutorials with progress tracking</li>
+                <li>Live instructor sessions with reminders</li>
+                <li>Badges and certificates for milestones</li>
               </ul>
             </div>
             <div>
-              <h3 className="text-2xl font-semibold mb-4 text-gray-800">Emergency Support</h3>
+              <h3 className="text-2xl font-semibold mb-4 text-gray-800">Emergency Support System</h3>
               <ul className="list-disc list-inside space-y-2">
-                <li>One-touch SOS button with live location sharing</li>
-                <li>Quick links to Police, Ambulance, and Trusted Contacts</li>
-                <li>Emergency code colors (Code Red/Green)</li>
+                <li>One-tap SOS with GPS sharing</li>
+                <li>Quick dial to emergency contacts</li>
+                <li>Smart emergency codes for different situations</li>
               </ul>
             </div>
             <div>
               <h3 className="text-2xl font-semibold mb-4 text-gray-800">Safety Toolkit</h3>
               <ul className="list-disc list-inside space-y-2">
-                <li>Add Emergency Contacts</li>
-                <li>Chat with a Safety Bot</li>
-                <li>Access location-aware alerts</li>
+                <li>Manage emergency contacts</li>
+                <li>AI-powered safety chatbot</li>
+                <li>Alerts, shelters, and travel safety tips</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-2xl font-semibold mb-4 text-gray-800">Community & Support</h3>
+              <ul className="list-disc list-inside space-y-2">
+                <li>Anonymous safety discussions</li>
+                <li>Mental health check-ins and affirmations</li>
+                <li>Expert help on laws and self-defense</li>
               </ul>
             </div>
           </div>
         </AnimatedCard>
 
-        <AnimatedCard title="🧑‍💻 My Responsibilities">
-          <ul className="list-disc list-inside space-y-3">
-            <li>UI/UX Design in Figma (all screens: mobile & web)</li>
-            <li>Created digital prototypes, style guides, and interaction logic</li>
-            <li>Developed paper wireframes and defined flows</li>
-            <li>Designed emergency card UI and visual icon system</li>
-            <li>Coordinated with peers for content ideas and interactions</li>
-            <li>Created Instagram post concepts and mockups to raise app awareness</li>
-          </ul>
+        <AnimatedCard title="Final Outcome">
+          <p>Delivered high-fidelity web and mobile prototypes, praised for strong user empathy, clear and accessible UI, and culturally sensitive design. Mentors recognized it as a high-impact safety solution, now under consideration for a real-world pilot with a safety NGO.</p>
+          <div className="grid md:grid-cols-2 gap-8 mt-8">
+            <img src={goalImage} alt="Nesara Goal" className="rounded-lg shadow-lg w-full h-auto" />
+            <img src={finalImage1} alt="Final Design 1" className="rounded-lg shadow-lg w-full h-auto" />
+            <img src={finalImage2} alt="Final Design 2" className="rounded-lg shadow-lg w-full h-auto" />
+            <img src={finalImage3} alt="Final Design 3" className="rounded-lg shadow-lg w-full h-auto" />
+          </div>
         </AnimatedCard>
 
-        <AnimatedCard title="🏁 Final Outcome">
-            <ul className="list-disc list-inside space-y-3">
-                <li>Delivered the complete prototype with responsive mobile & web screens</li>
-                <li>App design was well-received by mentors and users during testing</li>
-                <li>Recognized for clarity, safety-first approach, and user empathy</li>
-                <li>Team appreciated visual hierarchy, color balance, and emergency accessibility</li>
-                <li>Currently under consideration for pilot launch with a safety NGO</li>
-            </ul>
-        </AnimatedCard>
-
-        <div className="bg-white p-12 rounded-xl shadow-2xl mt-16">
-          <h2 className="text-4xl font-extrabold mb-6 text-gray-900 text-center">✨ Conclusion</h2>
-          <p className="text-lg text-gray-700 text-center">
-            Nesara was a meaningful project aimed at empowering women through design thinking and accessibility. By combining proactive training with emergency action, the app ensures every user feels safe, supported, and confident. From structured learning to instant SOS access, this app transforms digital design into real-world impact.
-          </p>
+        <div className="bg-white p-6 md:p-12 rounded-xl shadow-2xl mt-16">
+          <h2 className="text-3xl md:text-4xl font-extrabold mb-6 text-gray-900 text-center">Conclusion</h2>
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <img src={conclusionImage} alt="Nesara Conclusion" className="rounded-lg shadow-lg w-full h-auto" />
+            </div>
+            <div>
+              <p className="text-base md:text-lg text-gray-700">
+                Nesara represents a mission to empower women through thoughtful design. With its dual approach of preventive self-defense training and real-time emergency support, it creates a digital environment where users feel in control, safe, and supported.
+              </p>
+              <p className="text-base md:text-lg text-gray-700 mt-4">
+                By using accessible, responsive, and emotionally intuitive design, this project bridges the gap between fear and confidence. It demonstrates how UI/UX can make a meaningful difference—not just on screen, but in people’s real lives.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -5,21 +5,7 @@ import brandImage from "@/assets/casestudy-project3.2.jpg";
 import contributionsImage from "@/assets/casestudy-project3.5.jpg";
 import outcomeImage from "@/assets/casestudy-project3.3.jpg";
 import conclusionImage from "@/assets/casestudy-project3.4.jpg";
-
-const AnimatedCard = ({ title, children, className }) => {
-  const [ref, isVisible] = useScrollAnimation({ threshold: 0.1 });
-  return (
-    <div
-      ref={ref}
-      className={`bg-white p-8 rounded-xl shadow-lg mb-12 transition-all duration-700 ${
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-      } ${className}`}
-    >
-      <h2 className="text-3xl font-bold mb-6 text-gray-800 border-b pb-4">{title}</h2>
-      <div className="text-gray-700 leading-relaxed">{children}</div>
-    </div>
-  );
-};
+import AnimatedCard from "@/components/AnimatedCard";
 
 const TanjoreCoffeeCaseStudy = () => {
   const [headerRef, isHeaderVisible] = useScrollAnimation({ threshold: 0.2 });
@@ -38,8 +24,8 @@ const TanjoreCoffeeCaseStudy = () => {
               <img src={tanjoreCoffeeImage} alt="Tanjore Degree Coffee" className="rounded-lg shadow-lg" />
             </div>
             <div className="md:w-1/2 p-4 flex flex-col justify-center items-center text-center">
-              <h1 className="text-5xl font-extrabold mb-4 text-gray-900">Redesign for Tanjore Degree Coffee</h1>
-              <p className="text-xl text-gray-600 mb-6">
+              <h1 className="text-4xl md:text-5xl font-extrabold mb-4 text-gray-900">Redesign for Tanjore Degree Coffee</h1>
+              <p className="text-lg md:text-xl text-gray-600 mb-6">
                 Solo Project
               </p>
               <div className="text-left space-y-2 text-gray-600">
@@ -141,14 +127,14 @@ const TanjoreCoffeeCaseStudy = () => {
             </AnimatedCard>
         </div>
 
-        <div className="bg-white p-12 rounded-xl shadow-2xl mt-16">
+        <div className="bg-white p-6 md:p-12 rounded-xl shadow-2xl mt-16">
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="md:w-1/2">
               <img src={conclusionImage} alt="Conclusion" className="rounded-lg shadow-xl w-full" />
             </div>
             <div className="md:w-1/2">
-              <h2 className="text-4xl font-extrabold mb-6 text-gray-900">Conclusion</h2>
-              <p className="text-lg text-gray-700 mb-6">
+              <h2 className="text-3xl md:text-4xl font-extrabold mb-6 text-gray-900">Conclusion</h2>
+              <p className="text-base md:text-lg text-gray-700 mb-6">
                 The project concluded on a high note with overwhelming appreciation from the manager, who shared:
               </p>
               <blockquote className="p-6 bg-gray-100 border-l-4 border-gray-400 italic text-gray-600">

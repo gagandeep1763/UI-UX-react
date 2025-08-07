@@ -1,21 +1,23 @@
 import React from "react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import smartSonicImage from "@/assets/casestudy-project4.1.jpg";
 import responsibilitiesImage from "@/assets/casestudy-project4.2.jpg";
 import outcomeImage1 from "@/assets/casestudy-project4.3.jpg";
 import outcomeImage2 from "@/assets/casestudy-project4.4.jpg";
-
-const Card = ({ title, children }) => (
-  <div className="bg-white p-6 rounded-lg shadow-lg mb-8">
-    <h2 className="text-2xl font-bold mb-3">{title}</h2>
-    <div className="text-gray-700">{children}</div>
-  </div>
-);
+import AnimatedCard from "@/components/AnimatedCard";
 
 const SmartSonicCaseStudy = () => {
+  const [headerRef, isHeaderVisible] = useScrollAnimation({ threshold: 0.2 });
+
   return (
-    <div className="bg-gray-50 py-12">
-      <div className="container mx-auto px-4">
-        <div className="bg-white p-8 rounded-lg shadow-lg mb-12">
+    <div className="bg-gray-50 py-16">
+      <div className="container mx-auto px-6">
+        <div
+          ref={headerRef}
+          className={`bg-white p-8 rounded-xl shadow-2xl mb-16 transition-all duration-700 ${
+            isHeaderVisible ? "opacity-100 scale-100" : "opacity-0 scale-95"
+          }`}
+        >
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 p-4">
               <img src={smartSonicImage} alt="Smart Sonic Toothbrush" className="rounded-lg shadow-lg" />
@@ -41,28 +43,28 @@ const SmartSonicCaseStudy = () => {
           </div>
         </div>
 
-        <Card title="Overview">
+        <AnimatedCard title="Overview">
           <p>
             As part of my digital marketing internship, I collaborated on a branding and promotional campaign for Smart Sonic, an innovative tech-driven toothbrush brand. The goal was to build a strong digital identity, design an engaging website interface, and execute a compelling social media campaign that highlights the product’s smart features, aesthetics, and health benefits.
           </p>
-        </Card>
+        </AnimatedCard>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-8">
-          <Card title="Team Composition">
+        <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <AnimatedCard title="Team Composition" className="mb-0">
             <ul className="list-disc list-inside space-y-2">
               <li><strong>Gagandeep (My Role):</strong> UI/UX Designer & Social Media Strategist</li>
               <li><strong>Chiranth:</strong> Blog & Content Creator</li>
               <li><strong>Aryan:</strong> SEO & Analytics Specialist</li>
             </ul>
-          </Card>
-          <Card title="Objective">
+          </AnimatedCard>
+          <AnimatedCard title="Objective" className="mb-0">
             <p>
               To create a visually impactful and conversion-friendly digital presence for Smart Sonic that enhances user trust, brand awareness, and social engagement.
             </p>
-          </Card>
+          </AnimatedCard>
         </div>
 
-        <Card title="My Responsibilities">
+        <AnimatedCard title="My Responsibilities">
           <div className="flex flex-col md:flex-row items-start gap-8">
             <div className="md:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
@@ -82,9 +84,9 @@ const SmartSonicCaseStudy = () => {
               <img src={responsibilitiesImage} alt="Responsibilities" className="rounded-lg shadow-lg w-full" />
             </div>
           </div>
-        </Card>
+        </AnimatedCard>
 
-        <Card title="Key Features & Highlights">
+        <AnimatedCard title="Key Features & Highlights">
           <div className="grid md:grid-cols-2 gap-8">
             <div>
               <h3 className="text-xl font-semibold mb-2">UI/UX Design:</h3>
@@ -103,23 +105,23 @@ const SmartSonicCaseStudy = () => {
               </ul>
             </div>
           </div>
-        </Card>
+        </AnimatedCard>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-8">
-          <Card title="Challenges">
+        <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <AnimatedCard title="Challenges" className="mb-0">
             <ul className="list-disc list-inside space-y-2">
               <li>Designing a premium-feeling interface with limited assets.</li>
               <li>Maintaining consistency between design and marketing visuals.</li>
               <li>Balancing visual appeal with informational content.</li>
             </ul>
-          </Card>
-          <Card title="Outcome">
+          </AnimatedCard>
+          <AnimatedCard title="Outcome" className="mb-0">
             <ul className="list-disc list-inside space-y-2">
               <li>Delivered a polished digital prototype of the website.</li>
               <li>Executed a social campaign with positive feedback.</li>
               <li>Gained experience in cross-functional teamwork.</li>
             </ul>
-          </Card>
+          </AnimatedCard>
         </div>
 
         <div className="flex flex-col md:flex-row gap-8 mb-8">
@@ -131,7 +133,7 @@ const SmartSonicCaseStudy = () => {
             </div>
         </div>
 
-        <div className="bg-white p-8 rounded-lg shadow-lg mt-12">
+        <div className="bg-white p-12 rounded-xl shadow-2xl mt-16">
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 p-4">
               <img src={smartSonicImage} alt="Conclusion" className="rounded-lg shadow-lg w-full" />
