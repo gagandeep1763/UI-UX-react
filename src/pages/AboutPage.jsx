@@ -87,7 +87,7 @@ const AboutPage = () => {
                     With a Google UI/UX certification and hands-on work in healthcare apps, educational platforms, redesigns, responsive websites, and smartwatch UIs, I blend creativity with usability to design clean, intuitive interfaces that solve real-world problems.
                   </p>
                   <Button asChild variant="gradient" size="lg" className="mt-6">
-                    <a href="#">
+                    <a href="https://docs.google.com/document/d/10iFPakeQIdWWg9IDZOD_-QA1gLUDdGXX/preview" target="_blank" rel="noopener noreferrer">
                       <FileText className="mr-2 h-5 w-5" />
                       View My Resume
                     </a>
